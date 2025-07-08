@@ -2,7 +2,7 @@ const toggle = document.getElementById('themeToggle');
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   const tab = tabs[0];
-  if (!tab.url.includes("codeforces.com")) {
+  if (!tab.url || !tab.url.includes("codeforces.com")) {
     toggle.disabled = true;
     toggle.parentElement.innerText = "Open codeforces.com";
     return;

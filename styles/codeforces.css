@@ -5,6 +5,18 @@ body.cf-theme #tooltip {
     padding: 5px !important;
 }
 
+body.cf-theme #pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(221, 238, 255);"] {
+    background: #a3d2ff !important;
+}
+body.cf-theme #pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(212, 237, 201);"] {
+    background: #b2ff9f  !important;
+}
+
+body.cf-theme #pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(221, 238, 255);"] .notice,
+body.cf-theme #pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(212, 237, 201);"] .notice {
+    color: #393939 !important;
+}
+
 body.cf-theme #header>div.lang-chooser>div:nth-child(2)>a:nth-child(1):hover {
     filter: none !important;
 }

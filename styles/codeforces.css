@@ -312,7 +312,8 @@ div.button-up {
     height: 65px;
     display: flex;
     background-size: cover;
-    background-image: url("https://codeforces.com/predownloaded/16/ab/16ab0f02e2ffb767b3c9ab51395befc2a73ff423.png");
+    filter: none;
+    background-image: url("https://codeforces.com/predownloaded/03/89/038908e4aafcd5877b73683c6ddc88a029714bd5.png");
 }
 
 #header>div:nth-child(1)>a>img {

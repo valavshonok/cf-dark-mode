@@ -13,6 +13,13 @@
         "inject-inline.js"
       ],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://codeforces.com/problemset/problem/*/*",
+        "*://*.codeforces.com/problemset/problem/*/*"],
+      "js": ["modify-problemset-link.js"],
+      "run_at": "document_idle"
     }
   ],
   "icons": {

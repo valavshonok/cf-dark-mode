@@ -315,7 +315,7 @@ body.cf-theme #header>div:nth-child(1)>a {
     display: flex;
     background-size: cover;
     filter: none;
-    background-image: url("https://codeforces.com/predownloaded/03/89/038908e4aafcd5877b73683c6ddc88a029714bd5.png");
+    background-image: url("https://codeforces.com/predownloaded/d6/a5/d6a5b8dde8c991cad611845e242bb31dd57b8dfa.png");
 }
 
 body.cf-theme #header>div:nth-child(1)>a>img {

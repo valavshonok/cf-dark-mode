@@ -10,7 +10,17 @@
         "*://*.codeforces.com/*"
       ],
       "js": [
-        "inject-inline.js"
+        "cf-dark-mode.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://polygon.codeforces.com/*",
+        "*://*.polygon.codeforces.com/*"
+      ],
+      "js": [
+        "polygon-dark-mode.js"
       ],
       "run_at": "document_start"
     },

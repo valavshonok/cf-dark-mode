@@ -1,20 +1,17 @@
-const toggle = document.getElementById('themeToggle');
+const toggleTheme = document.getElementById('themeToggle');
+const toggleProblemsetRedirect = document.getElementById('problemsetRedirectToggle');
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-  const tab = tabs[0];
-  if (!tab.url || !tab.url.includes("codeforces.com")) {
-    toggle.disabled = true;
-    toggle.parentElement.innerText = "Open codeforces.com";
-    return;
-  }
-
   chrome.storage.sync.get("cfThemeEnabled", (data) => {
-    toggle.checked = data.cfThemeEnabled || false;
+    toggleTheme.checked = data.cfThemeEnabled || false;
+  });
+  chrome.storage.sync.get("cfProblemsetredirectEnabled", (data) => {
+    toggleProblemsetRedirect.checked = data.cfProblemsetredirectEnabled || false;
   });
 });
 
-toggle.addEventListener("change", () => {
-  const enabled = toggle.checked;
+toggleTheme.addEventListener("change", () => {
+  const enabled = toggleTheme.checked;
   chrome.storage.sync.set({ cfThemeEnabled: enabled });
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -33,4 +30,9 @@ toggle.addEventListener("change", () => {
       args: [enabled]
     });
   });
+});
+
+toggleProblemsetRedirect.addEventListener("change", () => {
+  const enabled = toggleProblemsetRedirect.checked;
+  chrome.storage.sync.set({ cfProblemsetredirectEnabled: enabled });
 });

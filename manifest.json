@@ -20,6 +20,13 @@
         "*://*.codeforces.com/problemset/problem/*/*"],
       "js": ["modify-problemset-link.js"],
       "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://codeforces.com/problemset/problem/*/*",
+        "*://*.codeforces.com/problemset/problem/*/*"],
+      "js": ["modify-problemset-redirect.js"],
+      "run_at": "document_start"
     }
   ],
   "icons": {

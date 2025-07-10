@@ -1032,6 +1032,32 @@ body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div img {
     background-color: #7c7c7c !important;
 }
 
+/* Code fragment in statement*/ 
+
+body.cf-theme #pageContent > div.problemindexholder > div.ttypography  pre.lstlisting {
+    background: #27272a;
+    border-radius: 5px;
+    margin: 0 0 15px 0 !important;
+    border: 1px solid #3f3f46 !important;
+}
+
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .pun,
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .opn,
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .clo {
+    color: #ff6f00 !important;
+}
+
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .pln {
+    color: #fff !important;
+}
+
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .kwd {
+    color: #0087ff !important;
+}
+
+body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div .prettyprint .typ {
+    color: #f0f !important;
+}
 
 /* All problems */
 

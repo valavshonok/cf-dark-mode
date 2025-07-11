@@ -1574,6 +1574,44 @@ body.cf-theme .challenge-box>.second-level-menu-list>li.backLava>div.leftLava {
     background: transparent;
 }
 
+/* 
+
+Company logo 
+
+*/
+
+/* rayan */
+body.cf-theme div:has(>img[src="https://assets.codeforces.com/files/rayan-header.svg"]) {
+    background-image: url(https://codeforces.com/predownloaded/d8/46/d8465e588c97afd953ac0269d4e39c42e18ce012.png);
+    background-size: contain;    
+}
+body.cf-theme img[src="https://assets.codeforces.com/files/rayan-header.svg"] {
+    visibility: hidden;
+}
+
+/* deltix */
+body.cf-theme a:has(>img[src="https://assets.codeforces.com/images/deltix-hlogo.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/09/8d/098dd42c907072be9dc62dc11ad44fe28b02d19f.png);
+    background-size: contain;    
+    display: flex;;
+    filter: none !important;
+}
+body.cf-theme img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
+    visibility: hidden;
+}
+
+/* hsu */
+body.cf-theme a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);
+    background-size: contain;    
+    display: flex;
+    filter: none !important;
+}
+body.cf-theme img[src="//assets.codeforces.com/images/hsu.png"] {
+    visibility: hidden;
+}
+
+
 
 /* General */
 

@@ -1687,7 +1687,7 @@ body.cf-theme .user-orange {
 }
 
 body.cf-theme .user-violet {
-    color: #f0f !important;
+    color: #c000ff !important;
 }
 
 body.cf-theme .user-blue {

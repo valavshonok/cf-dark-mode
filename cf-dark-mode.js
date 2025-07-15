@@ -1331,6 +1331,7 @@ body.cf-theme .ace-chrome .ace_string {
 body.cf-theme #pageContent>div.tests-placeholder>div>div>div.text>pre,
 body.cf-theme #pageContent div.file.input-view>div.text>pre,
 body.cf-theme #pageContent div.file.output-view>div.text>pre,
+body.cf-theme #pageContent div.file.answer-view>div.text>pre,
 body.cf-theme #pageContent div.file.checker-comment-view>div.text>pre {
     background: #303030 !important;
     color: #fffd00 !important;
@@ -1340,6 +1341,10 @@ body.cf-theme .verdict_type.welldone {
     color: #00ff6e;
 }
 
+body.cf-theme #pageContent > div > a:has(>i.icon-caret-right),
+body.cf-theme #pageContent > div > a:has(>i.icon-caret-down) {
+    color: white !important;
+}
 
 /* popup block */
 body.cf-theme .popup,

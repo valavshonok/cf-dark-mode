@@ -1330,6 +1330,7 @@ textarea.terms {
 #pageContent>div.tests-placeholder>div>div>div.text>pre,
 #pageContent div.file.input-view>div.text>pre,
 #pageContent div.file.output-view>div.text>pre,
+#pageContent div.file.answer-view>div.text>pre,
 #pageContent div.file.checker-comment-view>div.text>pre {
     background: #303030 !important;
     color: #fffd00 !important;
@@ -1337,6 +1338,11 @@ textarea.terms {
 
 .verdict_type.welldone {
     color: #00ff6e;
+}
+
+#pageContent > div > a:has(>i.icon-caret-right),
+#pageContent > div > a:has(>i.icon-caret-down) {
+    color: white !important;
 }
 
 

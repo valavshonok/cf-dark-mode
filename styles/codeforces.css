@@ -5,15 +5,16 @@
     padding: 5px !important;
 }
 
-#pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(221, 238, 255);"] {
+#pageContent>div.contestList>div.contests-table>div.datatable>div:nth-child(6)>table>tbody>tr>td.state[style="background-color: rgb(221, 238, 255);"] {
     background: #a3d2ff !important;
 }
-#pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(212, 237, 201);"] {
-    background: #b2ff9f  !important;
+
+#pageContent>div.contestList>div.contests-table>div.datatable>div:nth-child(6)>table>tbody>tr>td.state[style="background-color: rgb(212, 237, 201);"] {
+    background: #b2ff9f !important;
 }
 
-#pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(221, 238, 255);"] .notice,
-#pageContent > div.contestList > div.contests-table > div.datatable > div:nth-child(6) > table > tbody > tr > td.state[style="background-color: rgb(212, 237, 201);"] .notice {
+#pageContent>div.contestList>div.contests-table>div.datatable>div:nth-child(6)>table>tbody>tr>td.state[style="background-color: rgb(221, 238, 255);"] .notice,
+#pageContent>div.contestList>div.contests-table>div.datatable>div:nth-child(6)>table>tbody>tr>td.state[style="background-color: rgb(212, 237, 201);"] .notice {
     color: #393939 !important;
 }
 
@@ -1030,9 +1031,9 @@ Page contest
     background-color: #7c7c7c !important;
 }
 
-/* Code fragment in statement*/ 
+/* Code fragment in statement*/
 
-#pageContent > div.problemindexholder > div.ttypography  pre.lstlisting {
+#pageContent>div.problemindexholder>div.ttypography pre.lstlisting {
     background: #27272a;
     border-radius: 5px;
     margin: 0 0 15px 0 !important;
@@ -1588,8 +1589,9 @@ Company logo
 /* rayan */
 div:has(>img[src="https://assets.codeforces.com/files/rayan-header.svg"]) {
     background-image: url(https://codeforces.com/predownloaded/d8/46/d8465e588c97afd953ac0269d4e39c42e18ce012.png);
-    background-size: contain;    
+    background-size: contain;
 }
+
 img[src="https://assets.codeforces.com/files/rayan-header.svg"] {
     visibility: hidden;
 }
@@ -1597,10 +1599,12 @@ img[src="https://assets.codeforces.com/files/rayan-header.svg"] {
 /* deltix */
 a:has(>img[src="https://assets.codeforces.com/images/deltix-hlogo.png"]) {
     background-image: url(https://codeforces.com/predownloaded/09/8d/098dd42c907072be9dc62dc11ad44fe28b02d19f.png);
-    background-size: contain;    
-    display: flex;;
+    background-size: contain;
+    display: flex;
+    ;
     filter: none !important;
 }
+
 img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
     visibility: hidden;
 }
@@ -1608,10 +1612,11 @@ img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
 /* hsu */
 a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
     background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);
-    background-size: contain;    
+    background-size: contain;
     display: flex;
     filter: none !important;
 }
+
 img[src="//assets.codeforces.com/images/hsu.png"] {
     visibility: hidden;
 }
@@ -1638,14 +1643,14 @@ Login
 
 */
 
-#pageContent > div > div > div.bottom-links {
+#pageContent>div>div>div.bottom-links {
     border-top: 2px solid #3f3f46;
     background: #18181b;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
 
-#pageContent > div > div > div.caption.titled {
+#pageContent>div>div>div.caption.titled {
     border-bottom: 2px solid #3f3f46;
 }
 
@@ -1677,9 +1682,28 @@ input {
     border: 1px solid #515151;
 }
 
-input[type=checkbox],
-input[type=file] {
+input[type=checkbox] {
     cursor: pointer;
+}
+
+input[type="file"] {
+    font-size: 11px;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 0 !important;
+    height: 24px !important;
+}
+input[type="file"]::file-selector-button {
+    color: #d9d9d9;
+    background: #2a2a2a;
+    border-radius: 4px;
+    border: 1px solid #515151;
+    height: 22px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+input[type="file"]:hover::file-selector-button {
+    background: #383838;
 }
 
 input[type=submit],
@@ -1697,7 +1721,7 @@ button {
 
 input[name=sourceFile],
 input[name=inputFile],
-input[type=file] {
+input[type="file"] {
     background: unset !important;
     border: none !important;
 }

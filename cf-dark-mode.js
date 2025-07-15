@@ -1679,10 +1679,31 @@ body.cf-theme input {
     border: 1px solid #515151;
 }
 
-body.cf-theme input[type=checkbox],
-body.cf-theme input[type=file] {
+body.cf-theme input[type=checkbox] {
     cursor: pointer;
 }
+
+
+body.cf-theme input[type="file"] {
+    font-size: 11px;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 0 !important;
+    height: 24px !important;
+}
+body.cf-theme input[type="file"]::file-selector-button {
+    color: #d9d9d9;
+    background: #2a2a2a;
+    border-radius: 4px;
+    border: 1px solid #515151;
+    height: 22px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+body.cf-theme input[type="file"]:hover::file-selector-button {
+    background: #383838;
+}
+
 
 body.cf-theme input[type=submit],
 body.cf-theme button {
@@ -1699,7 +1720,7 @@ body.cf-theme button {
 
 body.cf-theme input[name=sourceFile],
 body.cf-theme input[name=inputFile],
-body.cf-theme input[type=file] {
+body.cf-theme input[type="file"] {
     background: unset !important;
     border: none !important;
 }

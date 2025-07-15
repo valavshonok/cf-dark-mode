@@ -1632,6 +1632,24 @@ div.jGrowl div.jGrowl-closer {
 
 
 
+/* 
+
+Login
+
+*/
+
+#pageContent > div > div > div.bottom-links {
+    border-top: 2px solid #3f3f46;
+    background: #18181b;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+#pageContent > div > div > div.caption.titled {
+    border-bottom: 2px solid #3f3f46;
+}
+
+
 
 
 /* General */

@@ -1634,6 +1634,26 @@ body.cf-theme div.jGrowl div.jGrowl-closer {
 
 
 
+/* 
+
+Login
+
+*/
+
+body.cf-theme #pageContent > div > div > div.bottom-links {
+    border-top: 2px solid #3f3f46;
+    background: #18181b;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+body.cf-theme #pageContent > div > div > div.caption.titled {
+    border-bottom: 2px solid #3f3f46;
+}
+
+
+
+
 /* General */
 
 body.cf-theme select {

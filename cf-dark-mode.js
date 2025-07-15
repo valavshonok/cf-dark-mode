@@ -142,7 +142,7 @@ body.cf-theme #sidebar>div:nth-child(1)>div:nth-child(2)>div>span.contest-state-
 
 
 body.cf-theme a:link {
-    color: #1b85ff;
+    color: #4ea0ff;
 }
 
 body.cf-theme a:visited {
@@ -1210,6 +1210,13 @@ body.cf-theme .ace_content {
 }
 
 /* My submitions */
+
+body.cf-theme #program-source-text-copy {
+    cursor: pointer;
+    color: #4ea0ff;
+    text-decoration: none;
+}
+
 body.cf-theme .highlighted-row td {
     background-color: #18181b !important;
 }

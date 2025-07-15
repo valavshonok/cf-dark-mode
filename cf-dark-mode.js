@@ -323,11 +323,11 @@ body.cf-theme #header>div:nth-child(1)>a>img {
 }
 
 /* Footer */
-body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>* {
+body.cf-theme #footer>div.footer-logo-div>* {
     margin-bottom: 20px;
 }
 
-body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>a:nth-child(1) {
+body.cf-theme #footer>div.footer-logo-div>a:nth-child(1) {
     display: flex;
     background-size: contain;
     height: 60px;
@@ -336,12 +336,12 @@ body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>a:nth-child(1) {
     background-image: url("https://codeforces.com/predownloaded/d0/db/d0dbaa1a7b5467170009bb8b87bdee479e092a6e.png");
 }
 
-body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>a:nth-child(1)>img,
-body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>a.itmo-logo>img {
+body.cf-theme #footer>div.footer-logo-div>a:nth-child(1)>img,
+body.cf-theme #footer>div.footer-logo-div>a.itmo-logo>img {
     display: none;
 }
 
-body.cf-theme #footer>div.footer-logo-div.footer-logo-div-ru>a.itmo-logo {
+body.cf-theme #footer>div.footer-logo-div>a.itmo-logo {
     display: flex;
     height: 50px;
     width: 180px;

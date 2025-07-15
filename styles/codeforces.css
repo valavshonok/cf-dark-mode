@@ -322,11 +322,11 @@ div.button-up {
 }
 
 /* Footer */
-#footer>div.footer-logo-div.footer-logo-div-ru>* {
+#footer>div.footer-logo-div>* {
     margin-bottom: 20px;
 }
 
-#footer>div.footer-logo-div.footer-logo-div-ru>a:nth-child(1) {
+#footer>div.footer-logo-div>a:nth-child(1) {
     display: flex;
     background-size: contain;
     height: 60px;
@@ -335,12 +335,12 @@ div.button-up {
     background-image: url("https://codeforces.com/predownloaded/d0/db/d0dbaa1a7b5467170009bb8b87bdee479e092a6e.png");
 }
 
-#footer>div.footer-logo-div.footer-logo-div-ru>a:nth-child(1)>img,
-#footer>div.footer-logo-div.footer-logo-div-ru>a.itmo-logo>img {
+#footer>div.footer-logo-div>a:nth-child(1)>img,
+#footer>div.footer-logo-div>a.itmo-logo>img {
     display: none;
 }
 
-#footer>div.footer-logo-div.footer-logo-div-ru>a.itmo-logo {
+#footer>div.footer-logo-div>a.itmo-logo {
     display: flex;
     height: 50px;
     width: 180px;

@@ -46,10 +46,21 @@
     },
     {
       "matches": [
-        "https://codeforces.com/enter*"
+        "*://codeforces.com/enter*",
+        "*://*.codeforces.com/enter*"
       ],
       "js": [
         "login-auto-check-remember.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://polygon.codeforces.com/edit-commit*",
+        "*://*.polygon.codeforces.com/edit-commit*"
+      ],
+      "js": [
+        "commit-auto-check-dont-send-email.js"
       ],
       "run_at": "document_idle"
     }

@@ -1612,6 +1612,20 @@ body.cf-theme img[src="//assets.codeforces.com/images/hsu.png"] {
 }
 
 
+/* 
+
+Notification
+
+*/
+
+body.cf-theme div.jGrowl div.jGrowl-notification,
+body.cf-theme div.jGrowl div.jGrowl-closer {
+    background-color: #ffe986 !important;
+    border: 2px solid #ffd956 !important;
+    color: #212121 !important;
+}
+
+
 
 /* General */
 

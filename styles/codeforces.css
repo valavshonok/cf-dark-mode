@@ -1610,6 +1610,22 @@ img[src="//assets.codeforces.com/images/hsu.png"] {
 }
 
 
+/* 
+
+Notification
+
+*/
+
+div.jGrowl div.jGrowl-notification,
+div.jGrowl div.jGrowl-closer {
+    background-color: #ffe986 !important;
+    border: 2px solid #ffd956 !important;
+    color: #212121 !important;
+}
+
+
+
+
 
 /* General */
 

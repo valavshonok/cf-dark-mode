@@ -1175,6 +1175,22 @@ div:has(> .tag-box) {
 
 /* Submit */
 
+.source-copier {
+    color: #d9d9d9;
+    background: #2a2a2a;
+    border-radius: 3px;
+    border: 1px solid #515151;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.source-copier:hover {
+    background: #383838;
+}
+div:has(>.source-copier) {
+    border-bottom: 1px solid #3f3f46 !important;
+}
+
+
 #editor {
     border: 1px solid #3f3f46 !important;
     box-sizing: border-box;

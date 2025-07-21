@@ -1175,6 +1175,21 @@ body.cf-theme #sidebar>div:nth-child(1)>table>tbody>tr:nth-child(3) * {
 
 /* Submit */
 
+body.cf-theme .source-copier {
+    color: #d9d9d9;
+    background: #2a2a2a;
+    border-radius: 3px;
+    border: 1px solid #515151;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+body.cf-theme .source-copier:hover {
+    background: #383838;
+}
+body.cf-theme div:has(>.source-copier) {
+    border-bottom: 1px solid #3f3f46 !important;
+}
+
 body.cf-theme #editor {
     border: 1px solid #3f3f46 !important;
     box-sizing: border-box;

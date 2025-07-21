@@ -1033,25 +1033,25 @@ body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div img {
 }
 
 /* Sample tests */
-div.epigraph-source {
+body.cf-theme div.epigraph-source {
    border-top: 1.5px solid #3f3f46 !important;
 }
-.problem-statement .sample-tests .title {
+body.cf-theme .problem-statement .sample-tests .title {
     border-bottom: 1.5px solid #3f3f46 !important;
  }
-.problem-statement .sample-tests .output {
+body.cf-theme .problem-statement .sample-tests .output {
     border: 1.5px solid #3f3f46 !important;
     border-top: none !important;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.problem-statement .sample-tests .input {
+body.cf-theme .problem-statement .sample-tests .input {
     border: 1.5px solid #3f3f46 !important;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.problem-statement .sample-tests .input-output-copier {
+body.cf-theme .problem-statement .sample-tests .input-output-copier {
     color: #d9d9d9;
     background: #2a2a2a;
     border-radius: 3px;
@@ -1059,7 +1059,7 @@ div.epigraph-source {
     cursor: pointer;
     transition: background 0.3s;
 }
-.problem-statement .sample-tests .input-output-copier:hover {
+body.cf-theme .problem-statement .sample-tests .input-output-copier:hover {
     background: #383838;
 }
 

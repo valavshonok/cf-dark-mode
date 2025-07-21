@@ -1129,14 +1129,6 @@ body.cf-theme .compact-problemset .problem-frames .problemindexholder>div.ttypog
     background-color: #7c7c7c !important;
 }
 
-
-/* Standing */
-
-body.cf-theme .datatable .highlighted-row .dark,
-body.cf-theme .datatable .highlighted-row td {
-    background: #002d57 !important;
-}
-
 /* Sidebar */
 body.cf-theme #sidebar>div.roundbox.sidebox.sidebar-menu.borderTopRound>ul>li {
     border: 2px solid #3f3f46;

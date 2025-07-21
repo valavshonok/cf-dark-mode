@@ -1131,13 +1131,6 @@ div.epigraph-source {
     background-color: #7c7c7c !important;
 }
 
-/* Standing */
-
-.datatable .highlighted-row .dark,
-.datatable .highlighted-row td {
-    background: #002d57 !important;
-}
-
 /* Sidebar */
 #sidebar>div.roundbox.sidebox.sidebar-menu.borderTopRound>ul>li {
     border: 2px solid #3f3f46;

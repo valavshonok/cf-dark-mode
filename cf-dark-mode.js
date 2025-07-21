@@ -19,10 +19,6 @@ body.cf-theme #pageContent > div.contestList > div.contests-table > div.datatabl
     color: #393939 !important;
 }
 
-body.cf-theme #header>div.lang-chooser>div:nth-child(2)>a:nth-child(1):hover {
-    filter: none !important;
-}
-
 body.cf-theme .CodeforcesContestInformationFrame td:has(.currentProblem) {
     background-color: #2d4464 !important;
 }
@@ -107,10 +103,6 @@ body.cf-theme #pageContent>div.datatable>div:nth-child(6)>table {
 body.cf-theme a {
     text-decoration: none;
     transition: filter 0.3s;
-}
-
-body.cf-theme a:hover {
-    filter: brightness(150%);
 }
 
 body.cf-theme {
@@ -314,7 +306,6 @@ body.cf-theme #header>div:nth-child(1)>a {
     height: 65px;
     display: flex;
     background-size: cover;
-    filter: none;
     background-image: url("https://codeforces.com/predownloaded/d6/a5/d6a5b8dde8c991cad611845e242bb31dd57b8dfa.png");
 }
 
@@ -1493,14 +1484,6 @@ body.cf-theme .spoiler-content a:hover {
     background: #5581b3 !important;
 }
 
-body.cf-theme #pageContent>div:nth-child(2)>div:nth-child(1)>h3>a {
-    filter: invert(1) hue-rotate(180deg);
-}
-
-body.cf-theme #pageContent>div:nth-child(2)>div:nth-child(1)>h3>a:hover {
-    filter: invert(0.6) hue-rotate(180deg);
-}
-
 body.cf-theme textarea {
     overflow: unset !important;
     box-sizing: border-box;
@@ -1596,10 +1579,6 @@ body.cf-theme .comment-table.highlight {
     background-color: #645000 !important;
 }
 
-body.cf-theme a.vote-for-comment:hover {
-    filter: unset;
-}
-
 /* Hacking */
 
 body.cf-theme #facebox>div>div>div>form>table>tbody>tr:nth-child(11)>td>div>div.alert.alert-danger.ttypography {
@@ -1648,8 +1627,7 @@ body.cf-theme img[src="https://assets.codeforces.com/files/rayan-header.svg"] {
 body.cf-theme a:has(>img[src="https://assets.codeforces.com/images/deltix-hlogo.png"]) {
     background-image: url(https://codeforces.com/predownloaded/09/8d/098dd42c907072be9dc62dc11ad44fe28b02d19f.png);
     background-size: contain;    
-    display: flex;;
-    filter: none !important;
+    display: flex;
 }
 body.cf-theme img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
     visibility: hidden;
@@ -1660,7 +1638,6 @@ body.cf-theme a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
     background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);
     background-size: contain;    
     display: flex;
-    filter: none !important;
 }
 body.cf-theme img[src="//assets.codeforces.com/images/hsu.png"] {
     visibility: hidden;
@@ -1819,13 +1796,13 @@ body.cf-theme .user-admin {
 body.cf-theme .user-black {
     color: #ECEDEE !important;
 }`;
-    
+
     const style = document.createElement("style");
     style.textContent = css;
     document.documentElement.appendChild(style);
 
 
-    
+
 
 
     const applyClass = () => {

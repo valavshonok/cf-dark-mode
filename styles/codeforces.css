@@ -1654,6 +1654,17 @@ img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
     visibility: hidden;
 }
 
+/* tinkoff */
+a:has(>img[src="//assets.codeforces.com/images/tinkoff-logo.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/8b/cc/8bccdab977a00cbf66e6aa50c8400f7e41dee378.png);
+    background-size: cover;
+    display: flex;
+}
+
+img[src="//assets.codeforces.com/images/tinkoff-logo.png"] {
+    visibility: hidden;
+}
+
 /* hsu */
 a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
     background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);

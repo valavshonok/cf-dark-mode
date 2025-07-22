@@ -1617,16 +1617,26 @@ Company logo
 /* rayan */
 body.cf-theme div:has(>img[src="https://assets.codeforces.com/files/rayan-header.svg"]) {
     background-image: url(https://codeforces.com/predownloaded/d8/46/d8465e588c97afd953ac0269d4e39c42e18ce012.png);
-    background-size: contain;    
+    background-size: cover;    
 }
 body.cf-theme img[src="https://assets.codeforces.com/files/rayan-header.svg"] {
+    visibility: hidden;
+}
+
+/* order-capital */
+body.cf-theme div:has(>img[src="https://assets.codeforces.com/files/order-capital-header.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/fc/c5/fcc5858fa22577ca438b8f72717c121b6c140af4.png);
+    background-size: cover;
+}
+
+body.cf-theme img[src="https://assets.codeforces.com/files/order-capital-header.png"] {
     visibility: hidden;
 }
 
 /* deltix */
 body.cf-theme a:has(>img[src="https://assets.codeforces.com/images/deltix-hlogo.png"]) {
     background-image: url(https://codeforces.com/predownloaded/09/8d/098dd42c907072be9dc62dc11ad44fe28b02d19f.png);
-    background-size: contain;    
+    background-size: cover;    
     display: flex;
 }
 body.cf-theme img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
@@ -1636,7 +1646,7 @@ body.cf-theme img[src="https://assets.codeforces.com/images/deltix-hlogo.png"] {
 /* hsu */
 body.cf-theme a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
     background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);
-    background-size: contain;    
+    background-size: cover;    
     display: flex;
 }
 body.cf-theme img[src="//assets.codeforces.com/images/hsu.png"] {

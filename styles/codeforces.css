@@ -1022,6 +1022,11 @@ Page contest
 }
 
 /* Sample tests */
+
+#pageContent > div.problemindexholder > div.testCaseMarker.notice {
+    left: -1px !important;
+}
+
 div.epigraph-source {
     border-top: 1.5px solid #3f3f46 !important;
 }

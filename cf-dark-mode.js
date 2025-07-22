@@ -1024,6 +1024,11 @@ body.cf-theme #pageContent>div.problemindexholder>div.ttypography>div img {
 }
 
 /* Sample tests */
+
+body.cf-theme #pageContent > div.problemindexholder > div.testCaseMarker.notice {
+    left: -1px !important;
+}
+
 body.cf-theme div.epigraph-source {
    border-top: 1.5px solid #3f3f46 !important;
 }

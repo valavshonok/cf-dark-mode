@@ -1654,6 +1654,17 @@ body.cf-theme img[src="//assets.codeforces.com/images/tinkoff-logo.png"] {
     visibility: hidden;
 }
 
+/* playrix */
+body.cf-theme a:has(>img[src="//assets.codeforces.com/images/playrix2017-logo-x.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/97/3e/973e912397deb28ea3bf3da6cb7068fbd36d56dc.png);
+    background-size: cover;
+    display: flex;
+}
+
+body.cf-theme img[src="//assets.codeforces.com/images/playrix2017-logo-x.png"] {
+    visibility: hidden;
+}
+
 /* hsu */
 body.cf-theme a:has(>img[src="//assets.codeforces.com/images/hsu.png"]) {
     background-image: url(https://codeforces.com/predownloaded/e9/fd/e9fd2c18ae3d5c12cbfa93ff24cc7a12ed685a78.png);

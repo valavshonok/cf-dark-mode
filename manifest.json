@@ -26,6 +26,16 @@
     },
     {
       "matches": [
+        "*://codeforces.com/submissions/*",
+        "*://*.codeforces.com/submissions/*"
+      ],
+      "js": [
+        "add-difficulty-column.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
         "*://codeforces.com/problemset/problem/*/*",
         "*://*.codeforces.com/problemset/problem/*/*"
       ],

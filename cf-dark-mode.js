@@ -1618,28 +1618,28 @@ body.cf-theme .challenge-box>.second-level-menu-list>li.backLava>div.leftLava {
 
 /* Code fragment in tutorial*/
 
-body.cf-theme pre.lstlisting {
+body.cf-theme .spoiler-content pre.lstlisting {
     background: #27272a !important;
     border-radius: 5px;
     margin: 0 0 15px 0 !important;
     border: 1px solid #3f3f46 !important;
 }
 
-body.cf-theme pre.lstlisting .prettyprint .pun,
-body.cf-theme pre.lstlisting .prettyprint .opn,
-body.cf-theme pre.lstlisting .prettyprint .clo {
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .pun,
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .opn,
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .clo {
     color: #ff6f00 !important;
 }
 
-body.cf-theme pre.lstlisting .prettyprint .pln {
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .pln {
     color: #fff !important;
 }
 
-body.cf-theme pre.lstlisting .prettyprint .kwd {
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .kwd {
     color: #0087ff !important;
 }
 
-body.cf-theme pre.lstlisting .prettyprint .typ {
+body.cf-theme .spoiler-content pre.lstlisting .prettyprint .typ {
     color: #f0f !important;
 }
 

@@ -154,6 +154,18 @@ async function addSolvedColumn() {
 }
 
 (async () => {
-    await addDifficultyColumn();
-    await addSolvedColumn();
+    const data = await new Promise((resolve) => {
+        chrome.storage.sync.get(
+            ["cfDifficultyTasksSubmissionsEnabled", "cfAcceptedTasksSubmissionsEnabled"],
+            resolve
+        );
+    });
+
+    const runDifficulty = data.cfDifficultyTasksSubmissionsEnabled;
+    const runSolved = data.cfAcceptedTasksSubmissionsEnabled;
+
+    if (runDifficulty)
+        await addDifficultyColumn();
+    if (runSolved)
+        await addSolvedColumn();
 })();

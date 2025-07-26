@@ -1,5 +1,7 @@
 const toggleTheme = document.getElementById('themeToggle');
 const toggleProblemsetRedirect = document.getElementById('problemsetRedirectToggle');
+const toggleDifficultyTasksSubmissions = document.getElementById('difficultyTasksSubmissionsToggle');
+const toggleAcceptedTasksSubmissions = document.getElementById('acceptedTasksSubmissionsToggle');
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   chrome.storage.sync.get("cfThemeEnabled", (data) => {
@@ -7,6 +9,12 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   });
   chrome.storage.sync.get("cfProblemsetredirectEnabled", (data) => {
     toggleProblemsetRedirect.checked = data.cfProblemsetredirectEnabled || false;
+  });
+  chrome.storage.sync.get("cfDifficultyTasksSubmissionsEnabled", (data) => {
+    toggleDifficultyTasksSubmissions.checked = data.cfDifficultyTasksSubmissionsEnabled || false;
+  });
+  chrome.storage.sync.get("cfAcceptedTasksSubmissionsEnabled", (data) => {
+    toggleAcceptedTasksSubmissions.checked = data.cfAcceptedTasksSubmissionsEnabled || false;
   });
 });
 
@@ -36,3 +44,14 @@ toggleProblemsetRedirect.addEventListener("change", () => {
   const enabled = toggleProblemsetRedirect.checked;
   chrome.storage.sync.set({ cfProblemsetredirectEnabled: enabled });
 });
+
+toggleDifficultyTasksSubmissions.addEventListener("change", () => {
+  const enabled = toggleDifficultyTasksSubmissions.checked;
+  chrome.storage.sync.set({ cfDifficultyTasksSubmissionsEnabled: enabled });
+});
+
+toggleAcceptedTasksSubmissions.addEventListener("change", () => {
+  const enabled = toggleAcceptedTasksSubmissions.checked;
+  chrome.storage.sync.set({ cfAcceptedTasksSubmissionsEnabled: enabled });
+});
+

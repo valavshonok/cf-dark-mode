@@ -1448,7 +1448,8 @@ body.cf-theme div.alert-info {
 body.cf-theme div.ttypography h1,
 body.cf-theme div.ttypography h2,
 body.cf-theme div.ttypography h3,
-body.cf-theme div.ttypography h4 {
+body.cf-theme div.ttypography h4,
+body.cf-theme div.ttypography h5 {
     color: #c1eaff;
 }
 

@@ -1457,7 +1457,8 @@ div.alert-info {
 div.ttypography h1,
 div.ttypography h2,
 div.ttypography h3,
-div.ttypography h4 {
+div.ttypography h4,
+div.ttypography h5 {
     color: #c1eaff;
 }
 

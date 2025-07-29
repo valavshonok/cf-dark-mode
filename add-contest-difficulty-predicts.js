@@ -123,4 +123,17 @@ async function addDifficultyToContestTable() {
     });
 }
 
-addDifficultyToContestTable();
+(async () => {
+    const data = await new Promise((resolve) => {
+        chrome.storage.sync.get(
+            ["cfDifficultyTasksSubmissionsEnabled"],
+            resolve
+        );
+    });
+
+    const runDifficulty = data.cfDifficultyTasksSubmissionsEnabled;
+
+    if (runDifficulty)
+        await addDifficultyToContestTable();
+})();
+

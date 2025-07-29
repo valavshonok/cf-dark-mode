@@ -1,15 +1,52 @@
 const problemMap = new Map();
 
+async function fetchRatingsFromClist() {
+    const clistRatingsMap = new Map();
+    try {
+        const proxy = 'https://corsproxy.io/?';
+        const res = await fetch(proxy + encodeURIComponent('https://clist.by/problems/?resource=1'));
+        const html = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const rows = doc.querySelectorAll('tr.show-hidden-activity-on-hover');
+
+        rows.forEach(row => {
+            const linkEl = row.querySelector('.problem-name-column a[href*="codeforces.com/contest/"]');
+            const ratingEl = row.querySelector('.problem-rating-column span');
+
+            if (!linkEl || !ratingEl) return;
+
+            const match = linkEl.href.match(/contest\/(\d+)\/problem\/([A-Z0-9]+)/);
+            if (!match) return;
+
+            const key = match[1] + match[2];
+            const rating = parseInt(ratingEl.textContent.trim());
+
+            if (!isNaN(rating)) {
+                clistRatingsMap.set(key, rating);
+            }
+        });
+    } catch (err) {
+        console.error('Error:', err);
+    }
+
+    return clistRatingsMap;
+}
+
 async function fetchProblemRatings() {
     try {
         const res = await fetch('https://codeforces.com/api/problemset.problems');
         const data = await res.json();
 
+        const clistRatings = await fetchRatingsFromClist();
+
         if (data.status === 'OK') {
             for (const problem of data.result.problems) {
+                const key = `${problem.contestId}${problem.index}`;
                 if (problem.rating) {
-                    const key = `${problem.contestId}${problem.index}`;
                     problemMap.set(key, problem.rating);
+                } else if (clistRatings.has(key)) {
+                    problemMap.set(key, "*" + clistRatings.get(key));
                 }
             }
         }
@@ -32,7 +69,13 @@ function getProblemDifficulty(problemUrl) {
 }
 
 function getColorClass(rating) {
-    if (typeof rating !== 'number') return '';
+    if (typeof rating === 'string') {
+        rating = rating.replace(/[^\d]/g, '');
+        rating = parseInt(rating, 10);
+    }
+
+    if (typeof rating !== 'number' || isNaN(rating)) return '';
+
     if (rating >= 3000) return 'user-legendary';
     if (rating >= 2400) return 'user-red';
     if (rating >= 2100) return 'user-orange';

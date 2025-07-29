@@ -35,6 +35,26 @@ async function fetchRatingsFromClist() {
 
 async function fetchProblemRatings() {
     try {
+        const cache = await new Promise((resolve) => {
+            chrome.storage.local.get(
+                ['cfProblemRatingsCache', 'cfProblemRatingsTimestamp'],
+                resolve
+            );
+        });
+        if (
+            cache.cfProblemRatingsCache &&
+            cache.cfProblemRatingsTimestamp &&
+            Date.now() - cache.cfProblemRatingsTimestamp < 10 * 60 * 1000
+        ) {
+            const parsed = cache.cfProblemRatingsCache;
+            for (const [key, value] of Object.entries(parsed)) {
+                problemMap.set(key, value);
+            }
+            return;
+        }
+
+
+
         const res = await fetch('https://codeforces.com/api/problemset.problems');
         const data = await res.json();
 
@@ -50,6 +70,12 @@ async function fetchProblemRatings() {
                 }
             }
         }
+
+        const obj = Object.fromEntries(problemMap.entries());
+        chrome.storage.local.set({
+            cfProblemRatingsCache: obj,
+            cfProblemRatingsTimestamp: Date.now()
+        });
     } catch (err) {
         console.error('Error: ', err);
     }

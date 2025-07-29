@@ -26,6 +26,16 @@
     },
     {
       "matches": [
+        "*://codeforces.com/contest/*",
+        "*://*.codeforces.com/contest/*"
+      ],
+      "js": [
+        "add-contest-difficulty-predicts.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
         "*://codeforces.com/submissions/*",
         "*://*.codeforces.com/submissions/*"
       ],

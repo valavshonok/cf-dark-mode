@@ -1724,6 +1724,16 @@ img[src="//assets.codeforces.com/images/hsu.png"] {
     visibility: hidden;
 }
 
+/* dytechlab */
+body.cf-theme a:has(>img[src="https://assets.codeforces.com/images/dytechlab/dytechlab-header-100.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/3d/60/3d6059594b47bd29b5e0b794271dc04f48be509e.png);
+    background-size: cover;    
+    display: flex;
+}
+body.cf-theme img[src="https://assets.codeforces.com/images/dytechlab/dytechlab-header-100.png"] {
+    visibility: hidden;
+}
+
 
 /* 
 

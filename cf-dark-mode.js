@@ -1721,6 +1721,16 @@ body.cf-theme img[src="https://assets.codeforces.com/images/dytechlab/dytechlab-
     visibility: hidden;
 }
 
+/* vkcup2016 */
+body.cf-theme a:has(>img[src="//assets.codeforces.com/images/star-vkcup-2016-300.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/05/80/0580a9414e90334ef98ecb9417599f4f15dc648c.png);
+    background-size: cover;    
+    display: flex;
+}
+body.cf-theme img[src="//assets.codeforces.com/images/star-vkcup-2016-300.png"] {
+    visibility: hidden;
+}
+
 
 /* 
 

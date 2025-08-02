@@ -1741,6 +1741,16 @@ body.cf-theme img[src="//assets.codeforces.com/images/technocup-logo-en.png"] {
     visibility: hidden;
 }
 
+/* kotlin */
+body.cf-theme a:has(>img[src="//assets.codeforces.com/images/kh/kotlin_heroes_2021_page_header.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/cf/77/cf77cb311b3e4b9574776876b96988fcf63fb749.png);
+    background-size: cover;    
+    display: flex;
+}
+body.cf-theme img[src="//assets.codeforces.com/images/kh/kotlin_heroes_2021_page_header.png"] {
+    visibility: hidden;
+}
+
 
 
 /* 

@@ -1,5 +1,9 @@
 (() => {
     const css = `
+body.cf-theme #header > div.lang-chooser > div:nth-child(3) {
+    background: transparent !important;
+}
+
 body.cf-theme #tooltip {
     background: #27272a !important;
     border: 1px solid #3f3f46 !important;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <style>
@@ -60,6 +61,21 @@
     input[type="checkbox"]:checked::after {
       opacity: 1;
     }
+
+    button {
+      border: solid #2489fc;
+      background-color: #1e1e1e;
+      color: #2489fc;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: all linear 200ms;
+    }
+
+    button:hover {
+      border: solid #469dff;
+      color: #469dff;
+    }
   </style>
 </head>
 
@@ -81,6 +97,14 @@
     accepted of tasks in submissions
   </label>
 
+
+  <label>
+    <button id="clearCacheButton">
+      Clear cache
+    </button>
+  </label>
+
   <script src="popup.js"></script>
 </body>
+
 </html>

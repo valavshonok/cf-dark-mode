@@ -2,6 +2,7 @@ const toggleTheme = document.getElementById('themeToggle');
 const toggleProblemsetRedirect = document.getElementById('problemsetRedirectToggle');
 const toggleDifficultyTasksSubmissions = document.getElementById('difficultyTasksSubmissionsToggle');
 const toggleAcceptedTasksSubmissions = document.getElementById('acceptedTasksSubmissionsToggle');
+const clearCacheButton = document.getElementById('clearCacheButton');
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   chrome.storage.sync.get("cfThemeEnabled", (data) => {
@@ -53,5 +54,11 @@ toggleDifficultyTasksSubmissions.addEventListener("change", () => {
 toggleAcceptedTasksSubmissions.addEventListener("change", () => {
   const enabled = toggleAcceptedTasksSubmissions.checked;
   chrome.storage.sync.set({ cfAcceptedTasksSubmissionsEnabled: enabled });
+});
+
+clearCacheButton.addEventListener("click", () => {
+  chrome.storage.local.remove(
+    ["cfProblemRatingsCache", "cfProblemRatingsTimestamp"]
+  );
 });
 

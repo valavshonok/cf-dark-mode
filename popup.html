@@ -68,7 +68,6 @@
       color: #2489fc;
       cursor: pointer;
       border-radius: 4px;
-      margin-top: 20px;
       transition: all linear 200ms;
     }
 
@@ -98,10 +97,14 @@
   </label>
 
 
-  <label>
+  <label style="
+    display: flex;
+    align-items: center;
+    margin-top: 20px;">
     <button id="clearCacheButton">
       Clear cache
     </button>
+    <span id="lastClearText"></span>
   </label>
 
   <script src="popup.js"></script>

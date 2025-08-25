@@ -3,6 +3,11 @@ const toggleProblemsetRedirect = document.getElementById('problemsetRedirectTogg
 const toggleDifficultyTasksSubmissions = document.getElementById('difficultyTasksSubmissionsToggle');
 const toggleAcceptedTasksSubmissions = document.getElementById('acceptedTasksSubmissionsToggle');
 const clearCacheButton = document.getElementById('clearCacheButton');
+const lastClearText = document.getElementById("lastClearText");
+
+chrome.storage.local.get("lastCacheClear", (data) => {
+    if (data.lastCacheClear) lastClearText.textContent = "Last clear " + data.lastCacheClear;
+});
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   chrome.storage.sync.get("cfThemeEnabled", (data) => {
@@ -57,8 +62,11 @@ toggleAcceptedTasksSubmissions.addEventListener("change", () => {
 });
 
 clearCacheButton.addEventListener("click", () => {
-  chrome.storage.local.remove(
-    ["cfProblemRatingsCache", "cfProblemRatingsTimestamp"]
-  );
+  chrome.storage.local.clear(() => {
+        const now = new Date().toLocaleString();
+        chrome.storage.local.set({ lastCacheClear: now }, () => {
+            lastClearText.textContent = "Last clear " + now;
+        });
+    });
 });
 

@@ -4,6 +4,17 @@
   "version": "1.0",
   "description": "Dark theme for the codeforces.com",
   "content_scripts": [
+    
+    {
+      "matches": [
+        "*://codeforces.com/profile/*",
+        "*://*.codeforces.com/profile/*"
+      ],
+      "js": [
+        "cf-profile-rectangle.js"
+      ],
+      "run_at": "document_idle"
+    },
     {
       "matches": [
         "*://codeforces.com/*",

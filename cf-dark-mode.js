@@ -1650,6 +1650,44 @@ body.cf-theme .spoiler-content pre.lstlisting .prettyprint .typ {
 
 /* 
 
+Add problem to contest
+
+*/
+
+body.cf-theme .ac_results li {
+    cursor: pointer !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+
+body.cf-theme .ac_results ul {
+    max-height: 600px !important;
+}
+
+body.cf-theme .ac_odd {
+    background-color: #27272a;
+}
+
+body.cf-theme .ac_even {
+    background-color: #18181b;
+}
+
+body.cf-theme .ac_over {
+    background-color: #0A246A !important;
+    color: white;
+}
+
+body.cf-theme .ac_results {
+    background-color: #27272a;
+    border: 1px solid #3f3f46 !important;
+    border-radius: 5px;
+}
+
+
+
+/* 
+
 Company logo 
 
 */
@@ -1754,7 +1792,6 @@ body.cf-theme a:has(>img[src="//assets.codeforces.com/images/kh/kotlin_heroes_20
 body.cf-theme img[src="//assets.codeforces.com/images/kh/kotlin_heroes_2021_page_header.png"] {
     visibility: hidden;
 }
-
 
 
 /* 

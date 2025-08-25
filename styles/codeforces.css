@@ -1657,6 +1657,44 @@ div.ttypography code {
     color: #f0f !important;
 }
 
+/* 
+
+Add problem to contest
+
+*/
+
+.ac_results li {
+    cursor: pointer !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+
+.ac_results ul {
+    max-height: 600px !important;
+}
+
+.ac_odd {
+    background-color: #27272a;
+}
+
+.ac_even {
+    background-color: #18181b;
+}
+
+.ac_over {
+    background-color: #0A246A !important;
+    color: white;
+}
+
+.ac_results {
+    background-color: #27272a;
+    border: 1px solid #3f3f46 !important;
+    border-radius: 5px;
+}
+
+
+
 
 /* 
 
@@ -1767,7 +1805,6 @@ a:has(>img[src="//assets.codeforces.com/images/kh/kotlin_heroes_2021_page_header
 img[src="//assets.codeforces.com/images/kh/kotlin_heroes_2021_page_header.png"] {
     visibility: hidden;
 }
-
 
 /* 
 

@@ -1,3 +1,16 @@
+#vote-list-filterDifficultyLowerBorder,
+#vote-list-filterDifficultyUpperBorder {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png) top left repeat-x;
+}
+#vote-current-filterDifficultyLowerBorder,
+#vote-current-filterDifficultyUpperBorder {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png)  left center;
+}
+#vote-list-filterDifficultyLowerBorder li a.vote-item:hover,
+#vote-list-filterDifficultyUpperBorder li a.vote-item:hover {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png)  left bottom;
+}
+
 #header > div.lang-chooser > div:nth-child(3) {
     background: transparent !important;
 }

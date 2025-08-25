@@ -1,5 +1,18 @@
 (() => {
     const css = `
+body.cf-theme #vote-list-filterDifficultyLowerBorder,
+body.cf-theme #vote-list-filterDifficultyUpperBorder {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png) top left repeat-x;
+}
+body.cf-theme #vote-current-filterDifficultyLowerBorder,
+body.cf-theme #vote-current-filterDifficultyUpperBorder {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png)  left center;
+}
+body.cf-theme #vote-list-filterDifficultyLowerBorder li a.vote-item:hover,
+body.cf-theme #vote-list-filterDifficultyUpperBorder li a.vote-item:hover {
+    background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png)  left bottom;
+}
+
 body.cf-theme #header > div.lang-chooser > div:nth-child(3) {
     background: transparent !important;
 }

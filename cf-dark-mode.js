@@ -1,5 +1,41 @@
 (() => {
     const css = `
+body.cf-theme a:has(img[src="https://userpic.codeforces.org/no-avatar.jpg"]) {
+    position: relative;
+    height: 64px;
+    display: block;
+    width: 64px;
+    background-image: url(https://codeforces.com/predownloaded/27/94/27945c9a54d25d59e990686a23dc96e898498977.png);
+    background-size: cover;
+}
+body.cf-theme img[src="https://userpic.codeforces.org/no-avatar.jpg"] {
+    display: none;
+}
+body.cf-theme .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.cf-theme div:has(>img[src="https://userpic.codeforces.org/no-title.jpg"]) {
+    position: relative;
+    height: 200px;
+    display: block;
+    width: 200px;
+    background-image: url(https://codeforces.com/predownloaded/27/94/27945c9a54d25d59e990686a23dc96e898498977.png);
+    background-size: cover;
+}
+body.cf-theme div:has(>div>img[src="https://userpic.codeforces.org/no-title.jpg"]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body.cf-theme img[src="https://userpic.codeforces.org/no-title.jpg"] {
+    display: none !important;
+}
+
+
+
 body.cf-theme #vote-list-filterDifficultyLowerBorder,
 body.cf-theme #vote-list-filterDifficultyUpperBorder {
     background: url(https://codeforces.com/predownloaded/8b/10/8b10e3fafc5357afe2b9eabc16b3e4a8962011dd.png) top left repeat-x;

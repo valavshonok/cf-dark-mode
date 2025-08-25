@@ -1,5 +1,18 @@
 (() => {
     const css = `
+
+body.cf-theme div#userActivityGraph svg,
+body.cf-theme div#userDifficultyGraph svg {
+    margin-bottom: 20px;
+}
+body.cf-theme ._UserActivityFrame_frame .userActivityRoundBox #userDifficultyGraph svg text {
+    fill: #888;
+}
+body.cf-theme ._UserActivityFrame_frame .userActivityRoundBox #userDifficultyGraph {
+    font-size: 0.7em;
+}
+
+
 body.cf-theme a:has(img[src="https://userpic.codeforces.org/no-avatar.jpg"]) {
     position: relative;
     height: 64px;

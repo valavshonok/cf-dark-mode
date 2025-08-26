@@ -1,3 +1,13 @@
+div:has(>#usersRatingGraphPlaceholder) {
+    height: 335px;
+}
+
+#usersRatingGraphPlaceholder .legend {
+    margin-top: 20px;
+}
+
+
+
 div#userActivityGraph svg,
 div#userDifficultyGraph svg {
     margin-bottom: 20px;

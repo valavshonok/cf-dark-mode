@@ -1,6 +1,16 @@
 (() => {
     const css = `
 
+body.cf-theme div:has(>#usersRatingGraphPlaceholder) {
+    height: 335px;
+}
+
+body.cf-theme #usersRatingGraphPlaceholder .legend {
+    margin-top: 20px;
+}
+
+
+
 body.cf-theme div#userActivityGraph svg,
 body.cf-theme div#userDifficultyGraph svg {
     margin-bottom: 20px;

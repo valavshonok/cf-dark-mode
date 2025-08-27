@@ -11,6 +11,16 @@
         "*://*.codeforces.com/profile/*"
       ],
       "js": [
+        "cf-analitics.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://codeforces.com/profile/*",
+        "*://*.codeforces.com/profile/*"
+      ],
+      "js": [
         "cf-profile-rectangle.js"
       ],
       "run_at": "document_idle"

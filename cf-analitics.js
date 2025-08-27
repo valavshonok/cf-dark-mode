@@ -227,7 +227,7 @@ async function insertDifficultyHistogram(handle) {
 
     const yAxis = block.querySelector(".cf-y-axis");
     const steps = 6;
-    const stepValue = Math.ceil(maxCount / steps);
+    const stepValue = Math.floor(maxCount / steps);
     for (let i = 0; i <= maxCount; i += stepValue) {
         const tick = document.createElement("div");
         tick.textContent = i;

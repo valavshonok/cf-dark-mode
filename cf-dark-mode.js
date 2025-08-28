@@ -1846,6 +1846,16 @@ body.cf-theme img[src="//assets.codeforces.com/images/star-vkcup-2016-300.png"] 
 }
 
 /* technocup */
+body.cf-theme a:has(>img[src="//assets.codeforces.com/images/technocup-logo.png"]) {
+    background-image: url(https://codeforces.com/predownloaded/5b/92/5b929b12e16a75a85d0a593aea162226d72662e8.png);
+    background-size: cover;    
+    display: flex;
+}
+body.cf-theme img[src="//assets.codeforces.com/images/technocup-logo.png"] {
+    visibility: hidden;
+}
+
+/* technocup en */
 body.cf-theme a:has(>img[src="//assets.codeforces.com/images/technocup-logo-en.png"]) {
     background-image: url(https://codeforces.com/predownloaded/5b/92/5b929b12e16a75a85d0a593aea162226d72662e8.png);
     background-size: cover;    

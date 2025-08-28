@@ -111,6 +111,10 @@ async function insertDifficultyHistogram(handle) {
 
     const maxCount = Math.max(...ratingsSorted.map(([, c]) => c));
 
+    if (maxCount == 0){
+        return;
+    }
+
     const existing = document.querySelector("#userDifficultyHistogram");
     if (existing) existing.remove();
 
@@ -227,7 +231,7 @@ async function insertDifficultyHistogram(handle) {
 
     const yAxis = block.querySelector(".cf-y-axis");
     const steps = 6;
-    const stepValue = Math.floor(maxCount / steps);
+    const stepValue = Math.max(1, Math.floor(maxCount / steps));
     for (let i = 0; i <= maxCount; i += stepValue) {
         const tick = document.createElement("div");
         tick.textContent = i;

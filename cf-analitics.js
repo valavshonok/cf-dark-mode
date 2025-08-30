@@ -44,61 +44,68 @@ function extractProblemKey(contestId, index) {
 
 async function fetchUserSubmissions(handle) {
     try {
-
         const cache = await new Promise(resolve =>
             chrome.storage.local.get([`histogramUserSubmissionsCache_${handle}`, `histogramUserSubmissionsTimestamp_${handle}`], resolve)
         );
-
+        const solved =  {};
+        const dataCache = cache[`histogramUserSubmissionsCache_${handle}`] || {};
+        if (cache[`histogramUserSubmissionsCache_${handle}`]){
+            Object.keys(dataCache).forEach(key => {
+                if (dataCache[key].verdict === "OK")
+                    solved[dataCache[key].problemId] = dataCache[key].rating;
+            });
+        }
         if (cache[`histogramUserSubmissionsCache_${handle}`] &&
             cache[`histogramUserSubmissionsTimestamp_${handle}`] &&
             Date.now() - cache[`histogramUserSubmissionsTimestamp_${handle}`] < 20*1000) {
-            return cache[`histogramUserSubmissionsCache_${handle}`];
+
+            return solved;
         }
-
-
-        const solved = cache[`histogramUserSubmissionsCache_${handle}`] || {};
-        const newSolved = {};
-
+         
         let from = 1;
         let batchSize = 1;
-        while (true) {
+        
+        if (Object.keys(solved).length === 0) 
+            batchSize = 1000000;
+        while (batchSize) {
             const res = await fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=${from}&count=${batchSize}`);
             const data = await res.json();
             if (data.status !== "OK")
                 break;
 
             const submissions = data.result;
-
-            const tmpSolved = {};
             if (!submissions.length)
                 break;
 
             for (const sub of submissions) {
-                if (sub.verdict !== "OK")
+                if (dataCache[sub.id]){
+                    batchSize = 0;
                     continue;
+                }
                 const key = extractProblemKey(sub.problem.contestId, sub.problem.index);
                 const rating = problemMap.get(key);
-                if (!rating)
+                dataCache[sub.id] = {
+                    verdict: sub.verdict,
+                    rating: rating,
+                    problemId: key
+                }
+                if (sub.verdict !== "OK" || !rating)
                     continue;
-                newSolved[key] = tmpSolved[key] = rating;
+                solved[key] = rating;
             }
-
-            const keys = Object.keys(tmpSolved);
-            if (keys.every(k => solved[k]))
-                break;
-            
-            chrome.storage.local.set({
-                [`console_this`]: true,
-            });
+            if (submissions.length < batchSize)
+                break;            
             from += batchSize;
-            batchSize *= 4;
+            batchSize *= 8;
+            if (batchSize > 64)
+                batchSize = 1000000;
         }
         chrome.storage.local.set({
-            [`histogramUserSubmissionsCache_${handle}`]: { ...solved, ...newSolved },
+            [`histogramUserSubmissionsCache_${handle}`]: dataCache,
             [`histogramUserSubmissionsTimestamp_${handle}`]: Date.now()
         });
 
-        return { ...solved, ...newSolved };
+        return solved;
 
     } catch (err) {
         console.error('Error in fetchUserSubmissions:', err);

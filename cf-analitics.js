@@ -69,9 +69,7 @@ async function fetchUserSubmissions(handle) {
 
             const submissions = data.result;
 
-             chrome.storage.local.set({
-                [`console_submissions`]: submissions,
-            });
+            const tmpSolved = {};
             if (!submissions.length)
                 break;
 
@@ -82,13 +80,10 @@ async function fetchUserSubmissions(handle) {
                 const rating = problemMap.get(key);
                 if (!rating)
                     continue;
-                newSolved[key] = rating;
+                newSolved[key] = tmpSolved[key] = rating;
             }
 
-            const keys = Object.keys(newSolved);
-            chrome.storage.local.set({
-                [`console_keys`]: keys,
-            });
+            const keys = Object.keys(tmpSolved);
             if (keys.every(k => solved[k]))
                 break;
             

@@ -4,114 +4,43 @@
   "version": "1.0",
   "description": "Dark theme for the codeforces.com",
   "content_scripts": [
-    
     {
       "matches": [
-        "*://codeforces.com/profile/*",
-        "*://*.codeforces.com/profile/*"
+        "*://*.codeforces.com/*",
+        "*://codeforces.com/*"
       ],
       "js": [
-        "cf-analitics.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/profile/*",
-        "*://*.codeforces.com/profile/*"
-      ],
-      "js": [
-        "cf-profile-rectangle.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/*",
-        "*://*.codeforces.com/*"
-      ],
-      "js": [
-        "cf-dark-mode.js"
+        "dist/start-page.js"
       ],
       "run_at": "document_start"
     },
     {
       "matches": [
-        "*://polygon.codeforces.com/*",
-        "*://*.polygon.codeforces.com/*"
+        "*://*.codeforces.com/*",
+        "*://codeforces.com/*"
       ],
       "js": [
-        "polygon-dark-mode.js"
+        "dist/idle-page.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.codeforces.com/*",
+        "*://codeforces.com/*"
+      ],
+      "css": [
+        "dist/styles.css"
       ],
       "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/contest/*",
-        "*://*.codeforces.com/contest/*"
-      ],
-      "js": [
-        "add-contest-difficulty-predicts.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/submissions/*",
-        "*://*.codeforces.com/submissions/*"
-      ],
-      "js": [
-        "add-difficulty-column.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/problemset/problem/*/*",
-        "*://*.codeforces.com/problemset/problem/*/*"
-      ],
-      "js": [
-        "modify-problemset-link.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/problemset/problem/*/*",
-        "*://*.codeforces.com/problemset/problem/*/*"
-      ],
-      "js": [
-        "modify-problemset-redirect.js"
-      ],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://codeforces.com/enter*",
-        "*://*.codeforces.com/enter*"
-      ],
-      "js": [
-        "login-auto-check-remember.js"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "*://polygon.codeforces.com/edit-commit*",
-        "*://*.polygon.codeforces.com/edit-commit*"
-      ],
-      "js": [
-        "commit-auto-check-dont-send-email.js"
-      ],
-      "run_at": "document_idle"
     }
   ],
   "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "64": "icons/icon64.png",
-    "128": "icons/icon128.png"
+    "16": "src/assets/icons/icon16.png",
+    "32": "src/assets/icons/icon32.png",
+    "48": "src/assets/icons/icon48.png",
+    "64": "src/assets/icons/icon64.png",
+    "128": "src/assets/icons/icon128.png"
   },
   "permissions": [
     "scripting",
@@ -119,7 +48,7 @@
     "storage"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_title": "Toggle cf-theme"
   }
 }

@@ -1,3 +1,6 @@
+body.cf-theme sup.upper-index {
+    display: inline;
+}
 
 body.cf-theme div:has(>#usersRatingGraphPlaceholder) {
     height: 335px;

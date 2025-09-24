@@ -1,4 +1,7 @@
+import getContestProblems from "../utils/getContestProblems";
 import getProblemRatings from "../utils/getProblemRatings";
+import getProblemRatingsFromName from "../utils/getProblemRatingsFromName";
+import { setToLocalStorage } from "../utils/storage";
 
 type Rating = number | `*${number}` | "—";
 
@@ -33,7 +36,12 @@ async function addDifficultyToContestTable() {
     const table = document.querySelector('table.problems');
     if (!table) return;
 
+    const match = location.pathname.match(/\/contest\/(\d+)/);
+    const contestId = match ? parseInt(match[1], 10) : null;
+    const contestProblems = contestId ? await getContestProblems(contestId): null;
+
     const problems = await getProblemRatings();
+    const problemsForName = await getProblemRatingsFromName();
 
     const headerRow = table.querySelector('tr');
     if (headerRow && !headerRow.querySelector('th.difficulty-header')) {
@@ -52,7 +60,12 @@ async function addDifficultyToContestTable() {
 
         const fullUrl = new URL(problemLink.href, location.origin).href;
         const problemKey = extractProblemKey(fullUrl);
-        const rating: Rating = problemKey ? (problems.get(problemKey) ?? "—") : "—";
+        
+        const problemName = contestProblems && problemKey ? contestProblems.get(problemKey)?.name : null;
+
+        const div2Rating = problemName ? (problemsForName.get(problemName) ?? "—") : "—";
+        const rating: Rating = problemKey ? (problems.get(problemKey) ?? div2Rating) : "—";
+
         const colorClass = getColorClass(rating);
 
         const td = document.createElement('td');
@@ -73,7 +86,12 @@ async function addDifficultyColumn() {
     const table = document.querySelector('.status-frame-datatable');
     if (!table) return;
 
+    const match = location.pathname.match(/\/contest\/(\d+)/);
+    const contestId = match ? parseInt(match[1], 10) : null;
+    const contestProblems = contestId ? await getContestProblems(contestId): null;
+
     const problems = await getProblemRatings();
+    const problemsForName = await getProblemRatingsFromName();
 
     const headerRow = table.querySelector('tr.first-row');
     if (headerRow && !headerRow.querySelector('th.difficulty-header')) {
@@ -92,8 +110,15 @@ async function addDifficultyColumn() {
 
         const fullUrl = new URL(problemLink.href, location.origin).href;
         const problemKey = extractProblemKey(fullUrl);
-        const rating: Rating = problemKey ? (problems.get(problemKey) ?? "—") : "—";
+        
+        const problemName = contestProblems && problemKey ? contestProblems.get(problemKey)?.name : null;
+
+        const div2Rating = problemName ? (problemsForName.get(problemName) ?? "—") : "—";
+        const rating: Rating = problemKey ? (problems.get(problemKey) ?? div2Rating) : "—";
+        
         const colorClass = getColorClass(rating);
+
+        
 
         const td = document.createElement('td');
         td.textContent = `${rating}`;

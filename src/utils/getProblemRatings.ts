@@ -22,6 +22,7 @@ export default async function getProblemRatings(): Promise<Map<string, Rating>> 
         const key = v.contestId + v.index;
         problems.set(key, v.rating);
     });
+
     clistProblems.forEach(v => {
         if (problems.has(v.id))
             return;

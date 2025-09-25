@@ -44,7 +44,7 @@ export default async function fetchContestProblems(contestId: number): Promise<P
         }
 
 
-        const res = await fetch(`https://codeforces.com/api/contest.standings?contestId=${contestId}&from=1&count=1`);
+        const res = await fetch(`https://codeforces.com/api/contest.standings?contestId=${contestId}&from=1&count=1&lang=en`);
         const data: ApiResponse = await res.json();
 
         if (data.status === 'OK') {

@@ -31,7 +31,7 @@ export default async function fetchProblemRatings(): Promise<Problem[]> {
         }
 
 
-        const res = await fetch('https://codeforces.com/api/problemset.problems');
+        const res = await fetch('https://codeforces.com/api/problemset.problems?lang=en');
         const data: ApiResponse = await res.json();
 
         if (data.status === 'OK') {
